@@ -1,0 +1,105 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title style="text-align: center">
+      Kripto
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+ <!-- <ion-content padding>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-textarea (dblclick)="temizleTextarea(1)" [(ngModel)]="textarea" rows="5" placeholder="Metin Giriniz"
+        clearInput></ion-textarea>
+    </ion-item>
+    <ion-item>
+
+      <button ion-button block outlinecolor="secondary" (click)="this[ButtonClickFonksiyon]()">
+        <ion-icon name="key"></ion-icon>
+        &nbsp;&nbsp;&nbsp;&nbsp;Dönüştür
+      </button>
+    </ion-item>
+    <ion-item>
+      <ion-textarea id="textArea" [(ngModel)]="textarea2" rows="5" [placeholder]="textarea2PlaceHolder" clearInput></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <button id="naber" #button ion-button block outlinecolor="secondary" (click)="matrisGir()">
+        <ion-icon name="checkbox-outline"></ion-icon>
+        &nbsp;&nbsp;&nbsp;&nbsp;Anahtar Gir
+      </button>
+    </ion-item>
+
+  </ion-list>
+</ion-content>  -->
+
+
+
+<ion-slides>
+
+  <ion-slide >
+      <ion-list>
+        <ion-item> <!-- Şifrele butonu -->
+          <button ion-button block outline (click)="Sifrele()">Şifrele</button>
+        </ion-item>
+        <ion-item> <!-- Metnin girildiği textarea -->
+          <ion-textarea (dblclick)="temizleTextarea(1)" (keyup)="clearNumberReset()" [(ngModel)]="SifrelencekMetin" rows="5" placeholder="Metin Giriniz"
+            clearInput></ion-textarea>
+        </ion-item>
+        <ion-item> <!-- Dönüştür butonu --> 
+          <button ion-button block outlinecolor="secondary" (click)="this[SifreButtonClickFonksiyon]()">
+            <ion-icon name="key"></ion-icon>
+            &nbsp;&nbsp;&nbsp;&nbsp;Dönüştür
+          </button>
+        </ion-item>
+        <ion-item id="SifretToggle"> <!-- checkbox -->
+          <ion-label>Sayısal Sifrele</ion-label>
+          <ion-checkbox [(ngModel)]="SifreSayisal" color="dark"></ion-checkbox>
+        </ion-item>
+        <ion-item> <!-- deşifre metin textareasi  -->
+          <ion-textarea id="textArea" [(ngModel)]="DesifrelenmisMetin" rows="5" [placeholder]="DesifrelenmisMetinPlaceHolder"
+            clearInput></ion-textarea>
+        </ion-item>
+        <ion-item> <!-- Anahtar gir butonu -->
+          <button id="SifreAnahtarButton" #button ion-button block outlinecolor="secondary" (click)="matrisGir(1)">
+            <ion-icon name="checkbox-outline"></ion-icon>
+            &nbsp;&nbsp;&nbsp;&nbsp;Anahtar Gir
+          </button>
+        </ion-item>
+      </ion-list>
+  </ion-slide>
+
+  <ion-slide>
+    <ion-list>
+      <ion-item> <!-- Şifre Çöz butonu -->
+        <button ion-button block outline (click)="SifreCoz()">Şifre Çöz</button>
+      </ion-item>
+      <ion-item> <!-- Metnin girildiği textarea -->
+        <ion-textarea (keyup)="clearNumberReset()" (dblclick)="temizleTextarea(0)" [(ngModel)]="DesifrelenecekMetin"  rows="5" placeholder="Metin Giriniz"
+          clearInput></ion-textarea>
+      </ion-item>
+      <ion-item> <!--Dönüştür butonu -->
+        <button ion-button block outlinecolor="secondary" (click)="this[DesifreButtonClickFonksiyon]()">
+          <ion-icon name="key"></ion-icon>
+          &nbsp;&nbsp;&nbsp;&nbsp;Dönüştür
+        </button>
+      </ion-item>
+      <ion-item id="DesifreToggle"> <!-- checkbox -->
+        <ion-label>Sayısal Sifre Cöz</ion-label>
+        <ion-checkbox [(ngModel)]="DesifreSayisal" color="dark"></ion-checkbox>
+      </ion-item>
+      <ion-item> <!-- Defşifre acık metin textareası -->
+        <ion-textarea id="textArea" [(ngModel)]="DesifreAcikMetin" rows="5" [placeholder]="DesifreAcikMetinPlaceHolder"
+          clearInput></ion-textarea>
+      </ion-item>
+      <ion-item> <!-- Anahtar gir butonu -->
+        <button id="DesifreAnahtarButton" #button ion-button block outlinecolor="secondary" (click)="matrisGir(0)">
+          <ion-icon name="checkbox-outline"></ion-icon>
+          &nbsp;&nbsp;&nbsp;&nbsp;Anahtar Gir
+        </button>
+      </ion-item>
+    </ion-list>
+  </ion-slide>
+
+</ion-slides>

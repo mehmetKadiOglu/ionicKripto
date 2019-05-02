@@ -1,0 +1,40 @@
+page-home {
+  .header-banner{
+		
+		height:200px;
+		min-height:200px;
+		background:red;
+	}
+
+	.slide-zoom {
+		// height:200px;
+		height: 100%;
+		// overflow:hidden;
+	}
+
+       ion-slides {
+        margin-top: 20%;
+          margin-bottom: 0px !important;
+          padding-bottom: 0px !important;
+    
+       }
+
+}
+.action-sheets-basic-page {
+  .ion-md-share {
+    color: #ED4248;
+  }
+  .ion-md-arrow-dropright-circle {
+    color: #508AE4;
+  }
+  .ion-md-heart-outline {
+    color: #31D55F;
+  }
+  .ion-md-calculator {
+    color: rgb(186, 213, 193);
+  }
+  .action-sheet-cancel ion-icon,
+  .action-sheet-destructive ion-icon {
+    color: #757575;
+  }
+}
